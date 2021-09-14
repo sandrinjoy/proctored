@@ -1,0 +1,34 @@
+{
+  "name": "proctored",
+  "version": "1.0.0",
+  "description": "Online Proctoring platform prototype",
+  "engines": {
+    "node": "12.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandrinejoy/proctored.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "webrtc",
+    "websockets"
+  ],
+  "author": "Sandrin Joy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandrinejoy/proctored/issues"
+  },
+  "homepage": "https://github.com/sandrinejoy/proctored#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "ws": "^8.2.2"
+  }
+}

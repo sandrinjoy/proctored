@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proctored</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/logos/proctored/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/logos/proctored/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/logos/proctored/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/logos/proctored/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/logos/proctored/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/logos/proctored/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="/logos/proctored/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+      integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+      integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/020ff3d1f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"
+      integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css"
+      integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+  </head>
+  <style>
+    .login-clean {
+      background: #f1f7fc;
+      padding: 80px 0;
+    }
+
+    .login-clean form {
+      max-width: 320px;
+      width: 90%;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 4px;
+      color: #505e6c;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-clean .illustration {
+      text-align: center;
+      padding: 0 0 20px;
+      font-size: 100px;
+      color: rgb(244, 71, 107);
+    }
+
+    .login-clean form .form-control {
+      background: #f7f9fc;
+      border: none;
+      border-bottom: 1px solid #dfe7f1;
+      border-radius: 0;
+      box-shadow: none;
+      outline: none;
+      color: inherit;
+      text-indent: 8px;
+      height: 42px;
+    }
+
+    .login-clean form .btn-primary {
+      background: #f4476b;
+      border: none;
+      border-radius: 4px;
+      padding: 11px;
+      box-shadow: none;
+      margin-top: 26px;
+      text-shadow: none;
+      outline: none !important;
+    }
+
+    .login-clean form .btn-primary:hover,
+    .login-clean form .btn-primary:active {
+      background: #eb3b60;
+    }
+
+    .login-clean form .btn-primary:active {
+      transform: translateY(1px);
+    }
+
+    .login-clean form .forgot {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: #6f7a85;
+      opacity: 0.9;
+      text-decoration: none;
+    }
+
+    .login-clean form .forgot:hover,
+    .login-clean form .forgot:active {
+      opacity: 1;
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <%- include ("../partials/nav") %>
+    <div class="login-clean">
+      <form method="get" action="/proctored">
+        <h3 id="name" style="text-align: center"></h3>
+        <hr />
+        <input type="hidden" id="room" name="room" value="<%=room%>" />
+        <input type="hidden" id="rn" name="rname" />
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            placeholder="name"
+          />
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="id" name="id" placeholder="id" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">Join</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDoSTVmF7fGcqrcyuHKM52bH81iltDWj6w",
+        authDomain: "hallofexams.firebaseapp.com",
+        databaseURL: "https://hallofexams.firebaseio.com",
+        projectId: "hallofexams",
+        appId: "1:79320774776:web:8daa68fc748b367449d58d",
+        measurementId: "G-1TNPJN728L",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      //make auth & firestore refs
+      const db = firebase.firestore();
+      var room = "<%- room %>";
+      console.log(room);
+      var docRef = db.collection("rooms").doc(room);
+      docRef
+        .get()
+        .then(function (doc) {
+          if (doc.exists) {
+            $("#name").html("Room : " + doc.data().name);
+
+            $("#rn").val(doc.data().name);
+          } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+          }
+        })
+        .catch(function (error) {
+          console.log("Error getting document:", error);
+        });
+    </script>
+  </body>
+</html>

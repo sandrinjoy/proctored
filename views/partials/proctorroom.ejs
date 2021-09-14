@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h4>
+      <span class="badge badge-pill badge-dark"> Exam </span>
+      <span class="exam_name" id="nameexam">...</span>
+    </h4>
+  </div>
+  <div class="btn-group w-100" role="group" aria-label="options">
+    <button
+      onclick="opentab(event,'cams')"
+      type="button"
+      class="btn btn-elegant tablinks active"
+    >
+      Camera Views
+    </button>
+    <button
+      onclick="opentab(event,'screens')"
+      type="button"
+      class="btn tablinks"
+    >
+      Screen Views
+    </button>
+    <button onclick="opentab(event,'logs')" type="button" class="btn tablinks">
+      Logs
+    </button>
+  </div>
+  <div id="cams" class="tabcontent w-100" style="display: block">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+      <div id="webcams"></div>
+    </div>
+  </div>
+  <div id="screens" class="tabcontent w-100">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+      <div id="computers"></div>
+    </div>
+  </div>
+  <div id="logs" class="tabcontent w-100">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+      <div id="logdata"></div>
+    </div>
+  </div>
+</div>
+<script>
+  var room = "<%- code %>";
+  const pic = "/a.gif";
+  const opentab = (evt, opted) => {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(opted).style.display = "block";
+    evt.currentTarget.className += " active";
+  };
+</script>
+<script src="scripts/rtcProctor.js"></script>

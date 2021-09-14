@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include ("../partials/header") %>
+ 
+</head>
+<body>
+      <%- include ("../partials/proctorednav") %>
+      <div class="container lout my-5 ">
+        <div class="row">
+            <div class="feature-intro text-center col-md-10 col-xl-8 mx-md-auto">
+                <h1 class="feature-title mb-3">Proctored</h1>
+                <p class="lead">The most effective Procoring Service Made for Everyone</p>
+                <button class="btn btn-lg btn-outline-primary mt-4 px-md-5" id="signup-btn1">
+                    
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span class="align-middle px-1">Sign In</span> 
+              </button>
+            </div>
+        </div>
+
+        <div class="row feature-list mt-5 pt-md-3">
+            <div class="col-md-4">
+                <div class="feature-box text-center p-3 p-md-4 mx-auto">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h5 class="feature-title mb-2">Real-Time</h5>
+                    <p class="text-muted">A Real-Time Communication enables the Proctor to view the Student's Activity</p>
+                </div>
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+                <div class="feature-box text-center p-3 p-md-4 mx-auto">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h5 class="feature-title mb-2">Smart Logging</h5>
+                    <p class="text-muted">The proctor gets alert when a Student does something uncommon During a Test</p>
+                </div>
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+                <div class="feature-box text-center p-3 p-md-4 mx-auto">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h5 class="feature-title mb-2">Live Chat</h5>
+                    <p class="text-muted">The Proctor and student can chat regarding technical issues , Queries or any Malpractises </p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- New Proctor Room Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">My New Proctored Room</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mb-1">
+            <form id="newroomform">
+                <div class="form-group">
+                  <label for="roomname">Room Name</label>
+                  <input type="text" class="form-control" id="roomname" placeholder="5BCA_PythonLab">
+                </div>
+                <div class="form-group">
+                  <label for="roomtype">Room Type</label>
+                  <select value="true" class="form-control" id="roomtype" onchange="typecheck()">
+                    <option value="true">Public (Anyone can Join with the Link)</option>
+                    <option value="false">Private (Only for the Users with the given E-mail IDs)</option>
+                  </select>
+                </div>
+                <div class="form-group" hidden id="emailsform">
+                  <label for="emails" data-role="tagsinput">Email IDs </label>
+                  <input type="text" class="form-control" id="emails" data-role="tagsinput">
+                </div>
+                <button id="newroombtn" type="button" class="btn btn-success"><i class="fas fa-plus"></i> Create Room</button>
+              </form>
+            </div>
+        </div>
+      </div>
+  </div>
+  <!-- Confirm Delete Modal -->
+  <div class="modal" id="confirmModal" style="display: none; z-index: 1050;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body" id="confirmMessage">
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-danger" id="confirmOk">Delete</button>
+              <button type="button" class="btn btn-secondary" id="confirmCancel">Cancel</button>
+            </div>
+      </div>
+    </div>
+  </div>
+      <div class="album py-5 bg-light lin">
+        <div class="container">
+
+          <div class="row rooms">
+             <!-- Loaded with Rooms js -->
+           
+          </div>
+        </div>
+      </div>
+
+      <div id="copyToast"class="toast bg-light" data-delay="1100" style="position: absolute; bottom:5vh; left:40vw;">
+        <div class="toast-header" >
+          Link has been Copied to the Clipboard
+        </div>
+      </div>
+
+      <div id="deleteToast"class="toast bg-light" data-delay="1100" style="position: absolute; bottom:5vh; left:40vw;">
+        <div class="toast-header" >
+          Room has been successfully deleted
+        </div>
+      </div>
+    </div>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDoSTVmF7fGcqrcyuHKM52bH81iltDWj6w",
+    authDomain: "hallofexams.firebaseapp.com",
+    databaseURL: "https://hallofexams.firebaseio.com",
+    projectId: "hallofexams",
+    appId: "1:79320774776:web:8daa68fc748b367449d58d",
+    measurementId: "G-1TNPJN728L"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  //make auth & firestore refs
+  const auth=firebase.auth();
+  const db=firebase.firestore();
+
+</script>
+<script src="/scripts/proctoredindex.js"></script>
+<script src="/scripts/auth.js"></script>
+</body>
+</html>

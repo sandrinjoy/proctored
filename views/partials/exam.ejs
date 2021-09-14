@@ -1,0 +1,117 @@
+<div class="container-fluid">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+        <h4><span class="badge badge-pill badge-dark"> Exam </span>
+          <span class="exam_name" id="examname"></span></h4>
+  </div>
+        <div class="btn-group xxx w-100" role="group" aria-label="options">
+            <button onclick="opentab(event,'q11')" type="button" class="btn btn-elegant tablinks active">Question 1</button>
+            <button onclick="opentab(event,'q22')" type="button" class="btn tablinks">Question 2</button>
+            <button onclick="opentab(event,'q33')" type="button" class="btn tablinks">Question 3</button>
+            <button onclick="opentab(event,'q44')" type="button" class="btn tablinks">Question 4</button>
+            <button onclick="opentab(event,'q55')" type="button" class="btn tablinks">Question 5</button>
+          </div>
+  <div id="q11" class="tabcontent w-100" style="display: block;">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+      <div id="q1">
+        <h2>What is your Name ?</h2>
+        <div class="form-group">
+          <label for="comment">Answer:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+      </div>
+      
+  </div>
+</div>
+<div id="q22" class="tabcontent w-100">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+      <div id="q2">
+        <h2>How old are you ?</h2>
+        <div class="form-group">
+          <label for="comment">Answer:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+      </div>
+  </div>
+</div>
+<div id="q33" class="tabcontent w-100">
+    <div class="pb-2 mt-4 mb-2 border-bottom">
+      <div id="q3">
+        <h2>Where do you live ?</h2>
+        <div class="form-group">
+          <label for="comment">Answer:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+      </div>
+  </div>
+</div>
+<div id="q44" class="tabcontent w-100">
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <div id="q4">
+      <h2>Where do you study ?</h2>
+      <div class="form-group">
+        <label for="comment">Answer:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+    </div>
+</div>
+</div>
+<div id="q55" class="tabcontent w-100">
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <div id="q5">
+      <h2>When is your birthday?</h2>
+      <div class="form-group">
+        <label for="comment">Answer:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+    </div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <div class="progress" id="progress">
+        <div class="progress-bar" id="myBar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn sub w-100 p-1" onclick="done()">Submit Answers</button>
+    </div>
+  </div>
+  
+ </div>
+</div>
+<script>
+    const opentab = (evt, opted) => {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(opted).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      
+      function progress(timeleft, timetotal, $element) {
+        var progressBarWidth = timeleft * $element.width() / timetotal;
+        $element
+            .find('div')
+            .animate({ width: progressBarWidth }, 500)
+            .html(timeleft + " seconds to go");
+        if(timeleft > 0) {
+            setTimeout(function() {
+                progress(timeleft - 1, timetotal, $element);
+            }, 1000);
+        }
+    };
+    function done(){
+          $("#preloder").delay(10).fadeIn("slow");
+      swal({title: "Answers Submitted Successfully",text: "You can leave the Page Now",icon: "success",buttons: false});
+    }
+    $('#examname').html('<%- rname%>')
+  </script>

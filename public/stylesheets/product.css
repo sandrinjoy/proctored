@@ -1,0 +1,182 @@
+.container {
+    max-width: 960px;
+  }
+
+  
+  /*
+   * Custom translucent site header
+   */
+  
+  .site-header {
+    background-color: rgba(255, 255, 255, 0.90);
+    -webkit-backdrop-filter: saturate(280%) blur(20px);
+    backdrop-filter: saturate(280%) blur(20px);
+    box-shadow: 0 2px 3px -3px rgba(0,0,0,0.7);
+  }
+  .site-header a,.site-header button {
+    color: #111;
+    transition: ease-in-out color .15s;
+  }
+  .site-header a:hover,.site-header button:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /*
+   * Dummy devices (replace them with your own or something else entirely!)
+   */
+  
+  .product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    border-radius: 21px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  
+  .product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    border-radius: 5px;
+  }
+  
+  .product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+  }
+  
+  
+  /*
+   * Extra utilities
+   */
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+  
+  .flex-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      -webkit-box-flex: 1;
+      flex: 1;
+    }
+  }
+  
+  .overflow-hidden { overflow: hidden; }
+
+
+  .feature-box {
+    border: 2px solid #dee2e6;
+    border-radius: 0.25rem;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    position: relative;
+    max-width: 380px;
+  }
+  
+  .feature-box:hover {
+    background-color: rgba(88, 99, 248, 0.1);
+  }
+  
+  .feature-box:hover:before, .feature-box:hover:after {
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+  }
+  
+  .feature-box:hover:before {
+    -webkit-transition: width .2s linear, height .2s linear .2s;
+    transition: width .2s linear, height .2s linear .2s;
+    border-top-color: #5863f8;
+    border-right-color: #5863f8;
+  }
+  
+  .feature-box:hover:after {
+    -webkit-transition: width .2s linear .4s, height .2s linear .6s;
+    transition: width .2s linear .4s, height .2s linear .6s;
+    border-bottom-color: #5863f8;
+    border-left-color: #5863f8;
+  }
+  
+  .feature-box:before, .feature-box:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-radius: 0.25rem;
+    border: 2px solid transparent;
+  }
+  
+  .feature-box:before {
+    left: -2px;
+    top: -2px;
+  }
+  
+  .feature-box:after {
+    right: -2px;
+    bottom: -2px;
+  }
+  
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
+  
+  .feature-icon .fas {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #5863f8;
+  }
+  
+  .btn-outline-primary {
+    color: #5863f8;
+    background-color: transparent;
+    background-image: none;
+    border-color: #5863f8;
+    border: 2px solid rgba(88, 99, 248, 0.75);
+  }
+  
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #5863f8;
+    border-color: #5863f8;
+  }
+  
+  .btn-outline-primary:focus, .btn-outline-primary.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(88, 99, 248, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(88, 99, 248, 0.5);
+  }
+  
+  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: #5863f8;
+    background-color: transparent;
+  }
+  
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #5863f8;
+    border-color: #5863f8;
+  }
+  
+  .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-primary.dropdown-toggle:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(88, 99, 248, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(88, 99, 248, 0.5);
+  }
+  
