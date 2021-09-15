@@ -49,14 +49,14 @@ const myRooms = (rooms) => {
             <p class="lead">Use <kbd>New Proctor Room</kbd> Button for Creating a Proctored Room</p>
         </div>
     </div></div>`;
-  html += infobar;
+  var counter = 0;
   rooms.forEach((e) => {
     const room = e.data();
     if (room.user == userd.email) {
+      counter = counter + 1;
       var type = room.public ? "public" : "private";
       const queryString = room.link;
       const roomcode = queryString.substr(queryString.indexOf("=") + 1);
-      console.log(queryString.substr(queryString.indexOf("=") + 1));
       const li = `
         <div class="col-md-4">
               <div class="card mb-4 box-shadow">
@@ -92,7 +92,9 @@ const myRooms = (rooms) => {
       html += li;
     }
   });
-
+  if (counter == 0) {
+    html += infobar;
+  }
   roomList.innerHTML = html;
 };
 const copy = (e) => {

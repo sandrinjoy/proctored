@@ -1,5 +1,9 @@
+let userx;
+let usern;
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    let fuser = formatUser(user);
+    createUser(fuser.uid, fuser);
     $.ajax({
       type: "POST",
       url: "/userauth",
@@ -22,6 +26,8 @@ firebase.auth().onAuthStateChanged(function (user) {
       },
     });
   } else {
+    userx = null;
+    usern = null;
     $(".lin").css("display", "none");
     $(".lout").css("display", "block");
   }
