@@ -1,13 +1,15 @@
-html{scroll-behavior:smooth}
-body{
-  font-family: 'Open Sans';
-  background:#fff;
-  color:#121212;   
-  }
-.lin ,.lout{
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans";
+  background: #fff;
+  color: #121212;
+}
+.lin,
+.lout {
   display: none;
 }
-
 
 .bootstrap-tagsinput .tag {
   background: #121212;
@@ -36,11 +38,11 @@ body{
   right: 2px;
   z-index: 9;
 }
-#myBar{
+#myBar {
   box-sizing: border-box;
-  background:#1C1C1C;
+  background: #1c1c1c;
 }
-#progress{
+#progress {
   height: 7vh;
 }
 
@@ -50,62 +52,59 @@ body{
   background-color: white;
 }
 
-
-.chat{
-  height : 183px;
+.chat {
+  height: 183px;
   width: 100%;
   overflow-x: auto;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
-.chat .left{
-left: 2px;
-text-align: left;
-width: 100%;
+.chat .left {
+  left: 2px;
+  text-align: left;
+  width: 100%;
 }
-.chat .right{
-right: 2px;
-width: 100%;
-text-align: right;
+.chat .right {
+  right: 2px;
+  width: 100%;
+  text-align: right;
 }
-.chatsub{
-height: 100%;
-align-content: flex-end; 
-}
-.chatinput{
-width: 70%;
-height: 100%;
-}
-.chatbutton{
+.chatsub {
   height: 100%;
-width: auto;
+  align-content: flex-end;
+}
+.chatinput {
+  width: 70%;
+  height: 100%;
+}
+.chatbutton {
+  height: 100%;
+  width: auto;
 }
 
-.xxx .btn{
-  border: 1px solid  #fff;
+.xxx .btn {
+  border: 1px solid #fff;
   background: #111;
   color: #ccc !important;
 }
 .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    max-height: 80vh;
-    overflow-y: auto ;
-    
-  }
-.tablinks.active{
-  background:#00C851 !important;
+  display: none;
+  padding: 6px 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.tablinks.active {
+  background: #00c851 !important;
   color: #fff !important;
 }
-.sub{
-background:#00C851 !important;
-color: #fff !important;
-transition: 0.5s;
-height: auto;
+.sub {
+  background: #00c851 !important;
+  color: #fff !important;
+  transition: 0.5s;
+  height: auto;
 }
-.sub:hover{
-background:#D3081C !important;
+.sub:hover {
+  background: #d3081c !important;
 }
-
 
 #preloder {
   position: fixed;
@@ -114,11 +113,11 @@ background:#D3081C !important;
   top: 0;
   left: 0;
   z-index: 1999;
-  background: #000;
-  border : 2px solid #ff00ff;
-  }
-  
-  .loader {
+  background: #fff;
+  border: 2px solid #ff00ff;
+}
+
+.loader {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -129,42 +128,42 @@ background:#D3081C !important;
   border-radius: 60px;
   animation: loader 1.8s linear infinite;
   -webkit-animation: loader 1.8s linear infinite;
-  }
-  @keyframes loader {
+}
+@keyframes loader {
   0% {
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  border: 4px solid #f44336;
-  border-left-color: transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
   }
   50% {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  border: 4px solid #673ab7;
-  border-left-color: transparent;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
   }
   100% {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-  border: 4px solid #f44336;
-  border-left-color: transparent;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
   }
-  }
-  
-  @-webkit-keyframes loader {
+}
+
+@-webkit-keyframes loader {
   0% {
-  -webkit-transform: rotate(0deg);
-  border: 4px solid #f44336;
-  border-left-color: transparent;
+    -webkit-transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
   }
   50% {
-  -webkit-transform: rotate(180deg);
-  border: 4px solid #673ab7;
-  border-left-color: transparent;
+    -webkit-transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
   }
   100% {
-  -webkit-transform: rotate(360deg);
-  border: 4px solid #f44336;
-  border-left-color: transparent;
+    -webkit-transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
   }
-  }
+}

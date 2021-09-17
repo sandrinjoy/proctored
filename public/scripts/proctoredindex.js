@@ -62,24 +62,30 @@ const myRooms = (rooms) => {
               <div class="card mb-4 box-shadow">
               <div class="card-header font-weight-bold">${room.name}</div>
                 <div class="card-body">
-                  <p class="card-text"><div class="p-1 rounded ${
+                  <div class="p-1 rounded ${
                     room.public ? "bg-success" : "bg-danger"
                   } text-white">${type}</div><br>
 
-                  <div class="p-1"><span class="font-weight-bold">Participants Link </span><br>
-                  <div class="row">
-  <div class="col-sm-8"><a href="${room.link}" target="_blank" class="small">${
-        room.link
-      }</a></div>
-  <div class="col-sm-4 d-flex align-items-center justify-content-center"><button title="copy link" class="btn btn-light border rounded shadow" value="${
-    room.link
-  }" onclick="copy(this.value)"><i class="fas fa-copy" ></i></button></div>
-</div>
+                  <div class=""><span class="font-weight-bold">Participants Link </span><br>
+               
        </div>
+       <div class=" ">
+  <div class="input-group-prepend">
+    <span class="input-group-text text-wrap text-truncate p-1"><a href="${
+      room.link
+    }" target="_blank" class="small">${room.link}</a></span>
+    <div class="input-group-append">
+    <button title="copy link" class=" btn btn-light  border shadow" value="${
+      room.link
+    }" onclick="copy(this.value)"><i class="fas fa-copy" ></i></button></div>
+    </div>
+
+</div>
+
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-warning"><a class="btn btn-sm btn-warning" href="/myroom?code=${roomcode}" target="_blank"><i class="fas fa-door-open"></i>Join</a></button>
+                      <button type="button" class="btn btn-sm btn-warning"><a class="btn btn-sm btn-warning" href="/myroom?code=${roomcode}" target="_blank"><i class="fas fa-door-open"></i>Start to Proctor</a></button>
                       <button type="button" class="btn btn-sm btn-dark" value="${
                         e.id
                       }" onclick="deleteRoom(this.value)"><i class="fas fa-trash"></i> Delete</button>
@@ -110,6 +116,7 @@ const typecheck = () => {
   }
 };
 newroombtn.addEventListener("click", (e) => {
+  $("#exampleModalCenter").modal("hide");
   let room = {
     name: newroomform["roomname"].value,
     public: newroomform["roomtype"].value == "true" ? true : false,
@@ -118,7 +125,7 @@ newroombtn.addEventListener("click", (e) => {
       newroomform["roomtype"].value == "false"
         ? $("#emails").tagsinput("items")
         : "",
-    link: "https://sheltered-badlands-08154.herokuapp.com/",
+    link: "https://proctored.herokuapp.com/",
   };
   newRoom(room);
 });

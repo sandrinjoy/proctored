@@ -43,7 +43,6 @@ const login = () => {
       var token = result.credential.accessToken;
     })
     .catch(function (error) {
-      alert(error);
       var errorCode = error.code;
       var errorMessage = error.message;
       var email = error.email;
